@@ -18,6 +18,27 @@ New Version
 
 ## Composer
 
+To install Administrator as a Composer package to be used with Laravel 6.0, simply add following lines to your composer.json.
+Since this has not been published to any package plattform you have to add this to the "repositories":
+
+"repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/cnsecms/Laravel-Admin"
+    }
+]
+
+Then you can add following line at "require":
+
+"cnsecms/administrator": "^6.0"
+
+If you prefer command line you can also run following commands:
+
+```sh
+composer config repositories.Laravel-Admin vcs https://github.com/cnsecms/Laravel-Admin
+composer require "cnsecms/administrator: ^6.0"
+```
+
 To install Administrator as a Composer package to be used with Laravel 5.8, simply run:
 
 ```sh
