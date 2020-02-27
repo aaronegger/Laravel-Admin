@@ -8,6 +8,7 @@ use Illuminate\Session\SessionManager as Session;
 use Symfony\Component\HttpFoundation\File\File as SFile;
 use Illuminate\Http\RedirectResponse;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
+use Illuminate\Contracts\Container\BindingResolutionException;
 
 /**
  * Handles all requests related to managing the data models
@@ -651,7 +652,7 @@ class AdminController extends Controller {
 		try {
 			$config = app('itemconfig');
 			$fieldFactory = app('admin_field_factory');
-		} catch (\ReflectionException $e) {
+		} catch (BindingResolutionException $e) {
 			return null;
 		}
 		if (array_key_exists('form_request', $config->getOptions())) {
