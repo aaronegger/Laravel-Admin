@@ -1,5 +1,9 @@
 ## Changelog
 
+### 6.0.1
+- Support: Laravel 6.0
+- FIX: SQL Server throws invalid column error on select list
+
 ### 5.8.1
 - Fix: Relationships BelongsTo (#30)
 
